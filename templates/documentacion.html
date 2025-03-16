@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación de la API</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #333; }
+        pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Documentación de la API de Animales</h1>
+    <p>Esta API permite obtener información sobre diferentes tipos de animales y sus sonidos.</p>
+
+    <h2>Endpoints disponibles:</h2>
+
+    <h3>1. Obtener la lista de animales</h3>
+    <p><strong>GET /animales</strong></p>
+    <p>Devuelve un JSON con los animales y sus sonidos.</p>
+    <pre>
+    {
+        "boa_constrictor": "Tsss!",
+        "gato": "Miau Miau!",
+        "huron": "Eek Eek!",
+        "perro": "Guau Guau!"
+    }
+    </pre>
+
+    <h3>2. Obtener información de un animal</h3>
+    <p><strong>GET /animales/&lt;nombre&gt;</strong></p>
+    <p>Devuelve el nombre y el sonido del animal especificado.</p>
+    <p><strong>Ejemplo de consulta:</strong></p>
+    <pre>
+    GET /animales/gato
+    </pre>
+    <p><strong>Ejemplo de respuesta:</strong></p>
+    <pre>
+    {
+        "nombre": "Whiskers",
+        "sonido": "Miau Miau!"
+    }
+    </pre>
+
+    <h2>Códigos de respuesta:</h2>
+    <ul>
+        <li><strong>200 OK</strong> - La solicitud se realizó correctamente.</li>
+        <li><strong>404 Not Found</strong> - El animal solicitado no existe en la base de datos.</li>
+    </ul>
+
+    <p>Para más información, contacta al desarrollador.</p>
+</body>
+</html>
