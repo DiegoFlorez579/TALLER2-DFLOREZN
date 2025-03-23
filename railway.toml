@@ -1,2 +1,2 @@
 [service]
-start = "gunicorn app:app"
+start = "gunicorn main:app"
