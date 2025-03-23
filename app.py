@@ -3,6 +3,7 @@ from models.gato import Gato
 from models.perro import Perro
 from models.huron import Huron
 from models.boa_constrictor import Boa_Constrictor
+import os
 
 app = Flask(__name__)
 
@@ -30,4 +31,5 @@ def obtener_animal(nombre):
     return jsonify({"error": "Animal no encontrado"}), 404
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
